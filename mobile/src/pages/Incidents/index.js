@@ -68,7 +68,7 @@ export default function Incidents() {
             <FlatList
                 style={styles.incidentList} 
                 keyExtractor={incident => String(incident.id)}
-                //showsVerticalScrollIndicator={false}        /* elimina a visualizacao do scroll vertical */
+                showsVerticalScrollIndicator={false}        /* elimina a visualizacao do scroll vertical */
                 onEndReached={loadIncidents}             /* esta propriedade aceita uma função que é disparada quando o usuário chega no final da lista */
                 onEndReachedThreshold={0.2}                 /* se ele estiver a 20% do final da lista, eu vou carregar os novos itens */
                 data={incidents}

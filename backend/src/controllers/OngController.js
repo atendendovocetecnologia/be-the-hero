@@ -1,3 +1,6 @@
+// realizando os testes
+const generateUniqueId = require('../utils/generateUniqueId');
+
 const crypto = require('crypto');   // é um pacote interno do Node JS
 
 // como preciso usar a conexão com o banco de dados
@@ -13,7 +16,11 @@ module.exports = {
     async create(request, response) {
         const { name, email, whatsapp, city, uf } = request.body
     
+        //desabilitado apenas para realizar o teste
         const id = crypto.randomBytes(4).toString('HEX');
+        //habilitado para fazer o teste
+        //const id = generateUniqueId;
+
         //console.log(data);
 
         // inserindo o registro, o await aguarda ser finalizado para passar para próxima linha de código
